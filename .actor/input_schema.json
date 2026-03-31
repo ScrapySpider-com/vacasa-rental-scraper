@@ -1,0 +1,29 @@
+{
+    "title": "Vacasa Rental Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Vacasa Unit URLs",
+            "type": "array",
+            "description": "List of Vacasa rental unit URLs to scrape. Each URL should be a direct link to a Vacasa unit page (e.g., https://www.vacasa.com/unit/12345).",
+            "editor": "stringList",
+            "prefill": ["https://www.vacasa.com/unit/124365"]
+        },
+        "googleMapsApiKey": {
+            "title": "Google Maps API Key (Optional)",
+            "type": "string",
+            "description": "Optional Google Maps Geocoding API key for converting coordinates to street addresses.",
+            "editor": "textfield",
+            "isSecret": true
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Proxy configuration. Apify Proxy recommended.",
+            "editor": "proxy",
+            "prefill": { "useApifyProxy": true }
+        }
+    },
+    "required": ["startUrls"]
+}

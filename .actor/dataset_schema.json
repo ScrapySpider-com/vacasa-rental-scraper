@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "fields": [
+        { "name": "url", "type": "string", "description": "Vacasa listing URL" },
+        { "name": "title", "type": "string", "description": "Property title" },
+        { "name": "latitude", "type": "number", "description": "Property latitude" },
+        { "name": "longitude", "type": "number", "description": "Property longitude" },
+        { "name": "formattedAddress", "type": "string", "description": "Full formatted address (requires Google Maps API key)" },
+        { "name": "streetNumber", "type": "string", "description": "Street number" },
+        { "name": "route", "type": "string", "description": "Street name" },
+        { "name": "city", "type": "string", "description": "City" },
+        { "name": "state", "type": "string", "description": "State abbreviation" },
+        { "name": "postalCode", "type": "string", "description": "Postal/ZIP code" },
+        { "name": "rating", "type": "string", "description": "Guest rating (scaled to 10)" },
+        { "name": "managedBy", "type": "string", "description": "Property management company" }
+    ]
+}

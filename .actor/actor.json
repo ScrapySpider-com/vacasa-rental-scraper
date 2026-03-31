@@ -1,0 +1,49 @@
+{
+    "actorSpecification": 1,
+    "name": "vacasa-rental-scraper",
+    "title": "Vacasa Rental Scraper",
+    "description": "Scrapes Vacasa vacation rental listings — extracts title, coordinates, rating, and property manager info. Optional Google Maps geocoding for full street addresses.",
+    "version": "1.0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Vacasa Rental Listings",
+            "views": {
+                "overview": {
+                    "title": "Overview",
+                    "transformation": {
+                        "fields": [
+                            "url",
+                            "title",
+                            "latitude",
+                            "longitude",
+                            "formattedAddress",
+                            "city",
+                            "state",
+                            "postalCode",
+                            "rating",
+                            "managedBy"
+                        ]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "url": { "label": "URL", "format": "link" },
+                            "title": { "label": "Title", "format": "text" },
+                            "latitude": { "label": "Latitude", "format": "number" },
+                            "longitude": { "label": "Longitude", "format": "number" },
+                            "formattedAddress": { "label": "Address", "format": "text" },
+                            "city": { "label": "City", "format": "text" },
+                            "state": { "label": "State", "format": "text" },
+                            "postalCode": { "label": "Zip", "format": "text" },
+                            "rating": { "label": "Rating", "format": "text" },
+                            "managedBy": { "label": "Managed By", "format": "text" }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
